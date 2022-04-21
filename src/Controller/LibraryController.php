@@ -15,6 +15,8 @@ class LibraryController extends AbstractController
      * @Route("/library/list", name="library_list")
      */
     public function list(Request $request, LoggerInterface $logger) {
+
+        $logger->info('List action called');
         $response = new JsonResponse();
         $response->setData([
              [
